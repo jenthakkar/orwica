@@ -139,7 +139,7 @@ const grid = $("#productGrid");
 function renderProducts(filter = "all") {
   const list = PRODUCTS.filter(p => filter === "all" || (filter === "new" ? p.isNew : p.tag.split(" ").includes(filter)));
   grid.innerHTML = list.map(p => {
-    const media = `${p.isNew ? '<span class="badge">New</span>' : ''}<img src="${p.img}" alt="${p.name}" loading="lazy">${p.info ? '<span class="view">View details</span>' : ''}`;
+    const media = `${p.isNew ? '<span class="badge">New</span>' : ''}<img src="${p.img}" alt="${p.name}" loading="lazy">${p.info ? '<span class=""></span>' : ''}`;
     return `
     <article class="card">
       ${p.info
